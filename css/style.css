@@ -2,7 +2,12 @@ body {
     margin: 0;
     display:flex;
     flex-direction: column;
+	height: 100vh;
 }
+
+main {
+    margin: auto auto 300px;
+}	
 
 p {
     color:red;
@@ -25,3 +30,21 @@ p {
     margin-left:auto;
 }
 
+.logo,
+.search-bar {
+    display:block;
+}
+
+.search-bar,
+.main-btns {
+	margin:auto;
+}
+
+.main-btns {
+	text-align:center;
+}
+
+footer {
+    display:flex;
+    background-color: grey;
+}
