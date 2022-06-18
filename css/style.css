@@ -1,10 +1,14 @@
+/*CSS reset?*/
+
 html {
     font-family:arial, sans-serif;
-    font-size: .9em; /*?*/
+    font-size: .875em; /*?*/
 }
 
 header {
-    margin: 5px;
+    margin: 0px 5px;
+    padding: 0px 10px;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,6 +16,7 @@ body {
     display:flex;
     flex-direction: column;
 	height: 100vh;
+    box-sizing: border-box;
 }
 
 main {
@@ -32,14 +37,24 @@ li {
 .navbar {
     display:flex;
     justify-content: space-evenly;
-    width: 100vw;
+    width: 100%;
     list-style-type: none;
     margin:0;
+    align-items: center;
     padding:0;
 }
 
+.navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
 .head-nav-btn {
-    padding: 20px;
+    padding: 10px;
 }
 
 .foot-nav-btn {
@@ -48,6 +63,37 @@ li {
 
 .gmail {
     margin-left:auto;
+}
+
+/*
+img[src="nav-grid.png"]:hover::before {
+    content:"";
+    border-radius:100%;
+    background-color:grey;
+    width: 100px;
+    height: 100px;
+}
+*/
+
+img[src="nav-grid.png"] {
+    width: 24px;
+    height: auto;
+    margin-left: 10px;
+}
+
+img[src="nav-grid.png"]:hover {
+    /* Circular background? */
+}
+
+.sign-in-btn {
+    background-color: #2090F0;
+    color: white;
+    padding: 10px 25px;
+    margin: 0;
+}
+
+.sign-in-btn:hover {
+    background-color: #30A0F9;
 }
 
 .logo,
@@ -62,7 +108,7 @@ li {
 }
 
 .search-bar {
-    width: 550px;
+    width: 90vw;
     height: 40px;
     border-radius: 30px; /*Why does this number work*/
     margin: 20px;
@@ -81,6 +127,10 @@ li {
     padding: 12px; /* change to calc?*/
 }
 
+img[src="search-mic.png"]:hover {
+    cursor: pointer;
+}
+
 .search-input {
     flex-grow: 1;
     border:none;
@@ -96,30 +146,46 @@ li {
 
 footer {
     display:flex;
-    background-color: lightgrey;
+    color: rgb(105, 105, 105);
+    width: 100%;
+    background-color: rgb(238, 238, 238);
 	flex-wrap:wrap;
 	justify-content: space-evenly;
+    align-items: center;
 }
 
 #neutral-msg {
     text-align: center;
-    flex-basis: 950px;
+    padding: 15px 20px;
+    flex-grow: 1;
+    flex-basis: 600px;
+}
+
+#neutral-msg img {
+    width: 12px; 
+    height: auto;
 }
 
 #footer-nav-left {
+    padding: 15px 20px;
 }
 
 #footer-nav-right {
+    padding: 15px 20px;
 }
 
 @media only screen and (min-width: 1000px) { /* need to automate calculating min width based on flex stuff?*/
     #footer-nav-left {
         order: -1;
     }
+    .search-bar {
+        /* doesn't belogn in this media query*/
+        width: 550px;
+    }
 }
 
 .foot-nav-btn {
-    /*margin: 20px;*/
+    padding: 20px; /*why does it not appear on the top and bottom?*/
 }
 
 
@@ -132,6 +198,6 @@ button {
 }
 
 button:hover {
-    box-shadow: 0px 0px 2px gray;
+    box-shadow: 0px 1px 2px gray;
     cursor: pointer;
 }
