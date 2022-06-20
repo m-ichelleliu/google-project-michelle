@@ -109,6 +109,7 @@ img[src="nav-grid.png"]:hover {
 
 .search-bar {
     width: 90vw;
+    max-width: 550px;
     height: 40px;
     border-radius: 30px; /*Why does this number work*/
     margin: 20px;
@@ -145,20 +146,21 @@ img[src="search-mic.png"]:hover {
 }
 
 footer {
-    display:flex;
+    display: grid;
     color: rgb(105, 105, 105);
     width: 100%;
-    background-color: rgb(238, 238, 238);
-	flex-wrap:wrap;
-	justify-content: space-evenly;
-    align-items: center;
+    background-color: rgb(241, 241, 241);
+    grid-template-areas: 
+    "neutral-msg"
+    "nav-left"
+    "nav-right";
 }
 
 #neutral-msg {
     text-align: center;
-    padding: 15px 20px;
-    flex-grow: 1;
-    flex-basis: 600px;
+    padding: 15px 17px;
+    grid-area: neutral-msg;
+    justify-self: center;
 }
 
 #neutral-msg img {
@@ -166,21 +168,39 @@ footer {
     height: auto;
 }
 
-#footer-nav-left {
-    padding: 15px 20px;
-}
-
+#footer-nav-left, 
 #footer-nav-right {
-    padding: 15px 20px;
+    text-align: center;
+    padding: 15px 17px;
+}
+#footer-nav-left {
+    grid-area: nav-left;
+}
+#footer-nav-right {
+    grid-area: nav-right;
 }
 
-@media only screen and (min-width: 1000px) { /* need to automate calculating min width based on flex stuff?*/
-    #footer-nav-left {
-        order: -1;
+@media only screen and (min-width: 705px) and (max-width:1200px) { /* need to automate calculating min width based on flex stuff?*/
+    footer {
+        grid-template-areas: 
+        "neutral-msg neutral-msg"
+        "nav-left nav-right";
     }
-    .search-bar {
-        /* doesn't belogn in this media query*/
-        width: 550px;
+}
+
+@media only screen and (min-width: 1200px) { /* need to automate calculating min width based on flex stuff?*/
+    footer {
+        grid-template-areas: 
+        "nav-left neutral-msg nav-right";
+        grid-template-columns: repeat(3, calc(100%/3));
+    }
+    #footer-nav-left {
+        text-align: left;
+        align-self: start;
+    }
+    #footer-nav-right {
+        text-align: right;
+        align-self: end;
     }
 }
 
