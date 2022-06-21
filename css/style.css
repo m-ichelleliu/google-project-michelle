@@ -20,7 +20,7 @@ body {
 }
 
 main {
-    margin: auto auto 350px;
+    margin: auto auto 300px;
 }	
 
 p {
@@ -103,7 +103,7 @@ img[src="nav-grid.png"]:hover {
 
 .logo {
     margin: auto;
-    width: 300px;
+    width: 280px;
     height:auto;
 }
 
@@ -161,10 +161,13 @@ footer {
     padding: 15px 17px;
     grid-area: neutral-msg;
     justify-self: center;
+    display: flex;
+    align-items: center;
 }
 
 #neutral-msg img {
     width: 12px; 
+    padding: 0px 5px;
     height: auto;
 }
 
@@ -226,7 +229,8 @@ button {
     border-radius: 5px;
     padding: 10px 18px;
     margin: 5px;
-    background-color: #f1f1f1;
+    background-color: #f8f8f8;
+    color:rgb(70, 70, 70);
 }
 
 button:hover {
