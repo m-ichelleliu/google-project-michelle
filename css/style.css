@@ -208,6 +208,18 @@ footer {
     padding: 20px; /*why does it not appear on the top and bottom?*/
 }
 
+.foot-nav-btn a,
+#neutral-msg a {
+    color: rgb(105, 105, 105);
+    text-decoration: none;
+}
+
+.foot-nav-btn a:hover,
+#neutral-msg a:hover { /*How to make underline when entire button is hovered?*/
+    color: rgb(105, 105, 105);
+    text-decoration: underline;
+}
+
 
 button {
     border: none;   
