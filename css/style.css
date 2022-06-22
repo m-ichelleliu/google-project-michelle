@@ -119,7 +119,7 @@ img[src="nav-grid.png"]:hover {
 }
 
 .search-bar:hover {
-    box-shadow: 0px 2px 5px #b6b6b6;
+    box-shadow: 0px 1px 5px #b6b6b6;
 }
 
 .search-bar img {
@@ -150,6 +150,7 @@ footer {
     color: rgb(105, 105, 105);
     width: 100%;
     background-color: rgb(241, 241, 241);
+    padding: 0px 5px;
     grid-template-areas: 
     "neutral-msg"
     "nav-left"
@@ -174,7 +175,7 @@ footer {
 #footer-nav-left, 
 #footer-nav-right {
     text-align: center;
-    padding: 15px 17px;
+    padding: 15px;
 }
 #footer-nav-left {
     grid-area: nav-left;
@@ -208,7 +209,7 @@ footer {
 }
 
 .foot-nav-btn {
-    padding: 20px; /*why does it not appear on the top and bottom?*/
+    padding: 12px; /*why does it not appear on the top and bottom?*/
 }
 
 .foot-nav-btn a,
